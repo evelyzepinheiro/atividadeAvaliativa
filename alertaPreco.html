@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Alerta de Preco</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body onload="configurar()">
+
+    <h2 class="titulo">Cadastrar Alerta de Produto</h2>
+
+    <div class="container mt-4">
+        <form id="formulario" action="#" method="post">
+            <fieldset>
+                <p>
+                    <label for="text" class="form-label">Produto</label>
+                    <select class="form-select" id="produtos">
+                        <option selected>Selecione um produto</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="valor" class="form-label">Valor desejado</label>
+                    <input type="number" class="form-control" id="valor" placeholder="Valor Desejado" required>
+                </p>
+                <label for="acao" class="form-label">Ação</label>
+                <select class="form-select" id="acao">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Notificar">Notificar</option>
+                    <option value="Comprar">Comprar</option>
+                </select>
+                <div class="row mt-3">
+                    <div class="col-12 d-flex justify-content-between">
+                        <button type="button" class="btn btn-success" onclick="adicionar()">Cadastrar alerta</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    
+		<table id="tabela" class="table mt-3">
+			<thead class="table-dark">
+				<tr>
+					<th>Produto</th>
+					<th>Valor desejado</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+
+    </div>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/alertaPreco.js"></script>
+</body>
+
+</html>
